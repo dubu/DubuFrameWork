@@ -14,6 +14,10 @@ import java.util.Map;
 
 /**
  * Created by rigel on 6/22/15.
+ *
+ *
+ * 참고 https://sites.google.com/site/gson/gson-user-guide
+ *
  */
 public class GoogleUtilTest {
 

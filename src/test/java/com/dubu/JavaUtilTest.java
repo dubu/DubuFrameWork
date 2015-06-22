@@ -11,7 +11,7 @@ import java.util.Enumeration;
 /**
  * Created by rigel on 6/22/15.
  */
-public class JavaCoreTest {
+public class JavaUtilTest {
 
     protected Logger logger = LoggerFactory.getLogger(getClass());
 
