@@ -1,5 +1,6 @@
 package com.dubu;
 
+import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
@@ -11,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 /**
  * Created by rigel on 6/22/15.
@@ -82,5 +84,25 @@ public class GoogleUtilTest {
         public void setTotalCount(Map<String, Long> totalCount) {
             this.totalCount = totalCount;
         }
+    }
+
+
+    @Test
+    public void joinerTest(){
+
+        Lists.newArrayList("aaaa", "bbbbb" , "ccccc");
+        Joiner.on(";").join(Lists.newArrayList("aaaa", "bbbbb", "ccccc"));
+        Joiner.on(";").join("aaaa","bbbbb");
+
+    }
+
+    @Test
+    public void spiltTest(){
+
+        String str   = "aaabababsdfbksabdkfbskbfk";
+        str.split("(a|aa)");
+
+        Pattern ptn = Pattern.compile("[a-z]*");  // intellij regex test
+
     }
 }

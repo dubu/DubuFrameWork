@@ -1,5 +1,6 @@
 package com.dubu;
 
+import com.google.gson.GsonBuilder;
 import org.apache.commons.lang3.time.FastDateFormat;
 import org.joda.time.DateTime;
 import org.junit.Test;
@@ -29,6 +30,12 @@ public class JodaTest {
         String date = FastDateFormat.getInstance("yyyy-MM-dd HH:mm").format(dateTime.toDate());
         logger.info(date);
 
+        dateTime = new DateTime(2000, 1, 1, 0, 0, 0, 0);
+        logger.info(dateTime.toDate().toString());
+
     }
+
+
+    // GsonBuilder 는 추후 계속.
 
 }
