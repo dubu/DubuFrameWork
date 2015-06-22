@@ -5,13 +5,14 @@
 
 test 쪽에만 코드를 붙인다. gradle 도 언젠가 해야 하는디.. ;;
 
-
 내용
 확작 유틸 joda
-유틸 goole 구와바
+유틸 goole 구와바 git clone https://code.google.com/p/guava-libraries/
 유틸 velocity utils
 유틸 자바 기본 샘플 요런거 테스트 용 https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
 스프링 spring-framework 4.1 jdk8
+
+
 
 
 

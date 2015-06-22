@@ -1,13 +1,12 @@
 package com.dubu;
 
 import com.google.common.base.Joiner;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.google.common.collect.Sets;
+import com.google.common.collect.*;
 import com.google.gson.Gson;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import sun.security.provider.certpath.Vertex;
 
 import java.util.HashMap;
 import java.util.List;
@@ -19,6 +18,9 @@ import java.util.regex.Pattern;
  *
  *
  * 참고 https://sites.google.com/site/gson/gson-user-guide
+ *
+ *
+ * 구와바는 소스 코드 다운 받아서 test 코드 부분을 참고합니다.
  *
  */
 public class GoogleUtilTest {
@@ -104,5 +106,17 @@ public class GoogleUtilTest {
 
         Pattern ptn = Pattern.compile("[a-z]*");  // intellij regex test
 
+    }
+
+
+    @Test
+    public void tableTest(){
+        Table<Vertex, Vertex, Double> weightedGraph = HashBasedTable.create();
+        weightedGraph.put(v1, v2, 4);
+        weightedGraph.put(v1, v3, 20);
+        weightedGraph.put(v2, v3, 5);
+
+        weightedGraph.row(v1); // returns a Map mapping v2 to 4, v3 to 20
+        weightedGraph.column(v3); // returns a Map mapping v1 to 20, v2 to 5
     }
 }
