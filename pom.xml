@@ -22,33 +22,6 @@
         <deploy_path>${project.build.directory}/minimized</deploy_path>
     </properties>
 
-
-    <!-- 서비스 -->
-    <profiles>
-        <profile>
-            <id>production</id>
-            <properties>
-                <env>production</env>
-            </properties>
-        </profile>
-        <profile>
-            <id>test</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <env>test</env>
-            </properties>
-        </profile>
-    </profiles>
-
-    <build>
-        <filters>
-            <filter>${basedir}/src/main/filters/${env}.properties</filter>
-        </filters>
-    </build>
-
-
     <dependencies>
         <!-- test -->
         <dependency>
