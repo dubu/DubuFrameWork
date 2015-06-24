@@ -1,6 +1,7 @@
 package com.dubu;
 
 import com.google.common.collect.Lists;
+import junit.framework.Assert;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,7 +11,7 @@ import java.net.NetworkInterface;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
-import static java.util.Arrays.asList;
+import java.util.Arrays;
 
 /**
  * Created by rigel on 6/22/15.
@@ -104,8 +105,8 @@ public class JavaUtilTest {
     }
 
     @Test
-    public void collectionTest(){
-        List li  = asList(1, 2, 3, 2);
+    public void colVsGuavaTest(){
+        List li  = Arrays.asList(1, 2, 3, 2);
         li.add(2423);
 //        li.add(2423);   // java.lang.UnsupportedOperationException 발생 size 고정있어 애러 발생;
 //        li.add(2423);
@@ -130,6 +131,14 @@ public class JavaUtilTest {
 
         }
 
+    }
+
+
+    @Test
+    public void howToTest(){
+
+        Assert.assertTrue(true);
+        Assert.fail();
     }
 
 

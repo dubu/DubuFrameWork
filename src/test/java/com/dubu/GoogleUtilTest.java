@@ -17,8 +17,9 @@ import java.util.regex.Pattern;
  * Created by rigel on 6/22/15.
  *
  *
- * 참고 https://sites.google.com/site/gson/gson-user-guide
- *
+ * 참고
+ * https://sites.google.com/site/gson/gson-user-guide
+ * https://code.google.com/p/guava-libraries/wiki/RangesExplained
  *
  * 구와바는 소스 코드 다운 받아서 test 코드 부분을 참고합니다.
  *
@@ -118,5 +119,15 @@ public class GoogleUtilTest {
 //
 //        weightedGraph.row(v1); // returns a Map mapping v2 to 4, v3 to 20
 //        weightedGraph.column(v3); // returns a Map mapping v1 to 20, v2 to 5
+    }
+
+    @Test
+    public void afds(){
+        List<? extends Integer> aa = Lists.newArrayList(1,2,3,3);
+        for (int i = 0; i < aa.size(); i++) {
+             Integer integer =  aa.get(i);
+            logger.info(integer.toString());
+
+        }
     }
 }
