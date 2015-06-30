@@ -8,10 +8,7 @@ import org.slf4j.LoggerFactory;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;
-import java.util.Enumeration;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * Created by rigel on 6/22/15.
@@ -140,6 +137,50 @@ public class JavaUtilTest {
         Assert.assertTrue(true);
         Assert.fail();
     }
+
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    public void expectTest() {
+
+        String[] arrA = {"a", "B"};
+        String a = arrA[3];
+    }
+
+
+
+    @Test
+    public void mapTest(){
+
+        // 순서 보장 안함
+        Map m1 = new HashMap();
+        m1.put("map", "HashMap");
+        m1.put("schildt", "java2");
+        m1.put("mathew", "Hyden");
+        m1.put("schildt", "java2s");
+        System.out.println(m1.keySet());
+        System.out.println(m1.values());
+
+        // ordering
+        SortedMap sm = new TreeMap();
+        sm.put("map", "TreeMap");
+        sm.put("schildt", "java2");
+        sm.put("mathew", "Hyden");
+        sm.put("schildt", "java2s");
+        System.out.println(sm.keySet());
+        System.out.println(sm.values());
+
+        // 넣은대로
+        LinkedHashMap lm = new LinkedHashMap();
+        lm.put("map", "LinkedHashMap");
+        lm.put("schildt", "java2");
+        lm.put("mathew", "Hyden");
+        lm.put("schildt", "java2s");
+        System.out.println(lm.keySet());
+        System.out.println(lm.values());
+
+    }
+
+
+
 
 
 }
