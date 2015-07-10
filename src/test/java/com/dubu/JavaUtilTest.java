@@ -179,6 +179,16 @@ public class JavaUtilTest {
 
     }
 
+    @Test public void soaf(){
+
+        String   a =  "True;";
+        String   b =  "tRrue";
+        Assert.assertTrue("true".equalsIgnoreCase("True"));
+        Assert.assertTrue("true".equalsIgnoreCase("tRue"));
+
+
+    }
+
 
 
 
